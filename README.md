@@ -20,6 +20,6 @@ This module is developed to extend our base server. It can be easily installed w
 > 
 > cd my-app
 > 
-> npm run plugin p=https://github.com/dominikhaid/node-module-docker.git
+> npm run plugin p=https://github.com/dominikhaid/node-module-docker-build.git
 > 
 > npm run dev
