@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "docker-build": "next build &&  docker build -t next-dominikhaid .",
+    "docker-wp-up": "cd ./docker/wordpress && docker-compose up  -d && cd ../../",
+    "docker-wp-down": "cd ./docker/wordpress && docker-compose down && cd ../../"
+  }
+}

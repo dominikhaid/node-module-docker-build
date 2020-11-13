@@ -1,15 +1,14 @@
 version: '3'
 
 services:
-  next-dominikhaid:
-    container_name: next-dominikhaid
-    image: next-dominikhaid
+  container_namer:
+    container_name: container_namer
+    image: image_name
     volumes:
-      - ./log:/usr/src/app/log
-      - ./public/fonts:/usr/src/app/public/fonts
+      # - ./log:/usr/src/app/log
     restart: unless-stopped
     ports:
-      - '80:80'
+      # - '80:80'
     networks:
       dh-bridge:
         ipv4_address: 172.29.0.55
