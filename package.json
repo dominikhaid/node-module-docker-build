@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "docker-build": "docker build  -t e-commerce-demo ."
+    "docker-build": "docker build  -t e-commerce-demo .",
+    "docker-up": "docker-compose up -d",
   }
 }
