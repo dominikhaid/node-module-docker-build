@@ -8,10 +8,10 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 options=($(echo $@ | tr " " "\n"))
 
 
-IMAGES=(next-dominikhaid) 
-CONTAINER=(next-dominikhaid)
-VOLUME=()
-SERVER='root@178.254.31.13:/var/www/vhosts/dominikhaid.de/dev.dominikhaid.de/docker/next-dominikhaid'
+IMAGES=(image_name) 
+CONTAINER=(container_name)
+VOLUME=(volumen_name)
+SERVER='serverip'
 BACKUPFOLDER=docker-backups
 
 
@@ -224,10 +224,10 @@ Action () {
 
     elif [ $1 = '-u' ]; then
         echo "${2}. ----UPLOAD BACKCUPS----"
-        scp -r -i /home/dominikhaid/.ssh/root $SCRIPTPATH/$BACKUPFOLDER $SERVER
+        rsync -r -P $SCRIPTPATH/$BACKUPFOLDER $SERVER
     elif [ $1 = '-d' ]; then
         echo "${2}. ----DOWNLOAD BACKCUPS----"
-        scp -r -i /home/dominikhaid/.ssh/root $SERVER/$BACKUPFOLDER  $SCRIPTPATH
+        rsync -r -P $SERVER/$BACKUPFOLDER  $SCRIPTPATH
     else 
         Help
         exit
